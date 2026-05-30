@@ -1,0 +1,11 @@
+{
+  "name": "Exile Guide",
+  "author": "zacharydavidleite",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["gaming", "poe2", "guide", "utility"],
+    "description": "A Path of Exile 2 companion for the Steam Deck Quick Access Menu: track a build guide, work through a campaign permanent-rewards checklist, keep a personal checklist, and use quick in-game reminders.",
+    "image": "https://opengraph.githubassets.com/1/zacharydavidleite/poedeck"
+  }
+}

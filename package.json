@@ -1,0 +1,38 @@
+{
+  "name": "exile-guide",
+  "version": "0.1.0",
+  "description": "Path of Exile 2 companion plugin for Decky Loader on the Steam Deck.",
+  "type": "module",
+  "scripts": {
+    "build": "shx rm -rf dist && rollup -c",
+    "watch": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "decky",
+    "steamdeck",
+    "path-of-exile-2",
+    "poe2"
+  ],
+  "author": "zacharydavidleite",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@decky/rollup": "^1.0.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "rollup": "^4.53.3",
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@decky/api": "^1.1.3",
+    "@decky/ui": "^4.11.4",
+    "react-icons": "^5.3.0",
+    "tslib": "^2.7.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["react", "react-dom"]
+    }
+  }
+}
