@@ -1,0 +1,84 @@
+{
+  "version": "0.5.0",
+  "game": "Path of Exile 2",
+  "note": "Permanent campaign rewards. Reward data reflects PoE 2 patch 0.5. Verify against your patch in-game.",
+  "acts": [
+    {
+      "id": "act1",
+      "name": "Act 1",
+      "steps": [
+        { "id": "act1-beira", "label": "Beira Of The Rotten Pack — Clearfell", "reward": "+10% Cold Resistance", "type": "resistance" },
+        { "id": "act1-crowbell", "label": "Crowbell — Hunting Grounds", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act1-king-in-the-mist", "label": "The King In The Mist — Freythorn", "reward": "+30 Spirit", "type": "spirit" },
+        { "id": "act1-unas-lute", "label": "Una's Lute — Ogham Farmlands", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act1-candlemass", "label": "Candlemass, The Living Rite — Ogham Manor", "reward": "+20 Maximum Life", "type": "life" }
+      ]
+    },
+    {
+      "id": "act2",
+      "name": "Act 2",
+      "steps": [
+        { "id": "act2-kabala", "label": "Kabala, Constrictor Queen — Keth", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act2-garukhan", "label": "Sisters of Garukhan Shrine — The Spires of Deshar", "reward": "+10% Lightning Resistance", "type": "resistance" },
+        { "id": "act2-final-letter", "label": "Final Letter — Deshar", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act2-titans-altar", "label": "Valley Of The Titans Altar", "reward": "Choice: +1 Charm Slot with 30% increased Charm Charges gained, OR +1 Charm Slot with 30% increased Charm Effect Duration", "type": "choice" }
+      ]
+    },
+    {
+      "id": "act3",
+      "name": "Act 3",
+      "steps": [
+        { "id": "act3-silverfist", "label": "Mighty Silverfist — Jungle Ruins", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act3-ignagduk", "label": "Ignagduk, The Bog Witch — The Azak Bog", "reward": "+30 Spirit", "type": "spirit" },
+        { "id": "act3-blackjaw", "label": "Blackjaw, The Remnant — Jiquani's Machinarium", "reward": "+10% Fire Resistance", "type": "resistance" },
+        { "id": "act3-sacrificial-heart", "label": "Sacrificial Heart — Aggorat", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act3-venom-vial", "label": "Venom Vial to Servi", "reward": "Choice: 25% increased Stun Threshold, OR 30% increased Elemental Ailment Threshold, OR 25% increased Mana Regeneration Rate", "type": "choice" }
+      ]
+    },
+    {
+      "id": "act4",
+      "name": "Act 4",
+      "steps": [
+        { "id": "act4-omniphobia", "label": "Omniphobia, Fear Manifest — Journey's End", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act4-silent-hall", "label": "Silent Hall — Eye of Hinekora", "reward": "+5% Maximum Mana", "type": "mana" },
+        { "id": "act4-yama", "label": "Yama The White — Trial Of The Ancestors", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "act4-three-trials", "label": "Three Trials — Halls of the Dead", "reward": "Choice per trial: Tawhoa (+5 Dexterity or +5 Lightning Res), Tasalio (+5 Intelligence or +5 Cold Res), Ngamahu (+5 Strength or +5 Fire Res)", "type": "choice" },
+        { "id": "act4-goddess-of-justice", "label": "Goddess Of Justice — Abandoned Prison", "reward": "Choice: +30% increased Mana recovery from Flasks, OR +30% increased Life recovery from Flasks", "type": "choice" },
+        { "id": "act4-great-white-one", "label": "Great White One — Whakapanu Island", "reward": "Choice: 30% increased Armour/Evasion/Energy Shield, OR 15% of Armour applies to Elemental Damage with Deflection & shield recharge bonuses", "type": "choice" }
+      ]
+    },
+    {
+      "id": "interlude1",
+      "name": "Interlude 1: The Curse Of Holten",
+      "steps": [
+        { "id": "int1-oswin", "label": "Oswin, The Dread Warden — Wolvenhold", "reward": "+2 Passive Skill Points", "type": "passive" }
+      ]
+    },
+    {
+      "id": "interlude2",
+      "name": "Interlude 2: The Stolen Barya",
+      "steps": [
+        { "id": "int2-akthi-anundr", "label": "Akthi and Anundr — Clearing The Way", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "int2-molten-ones-gift", "label": "Molten One's Gift — The Khari Crossing", "reward": "+5% increased Maximum Life", "type": "life" },
+        { "id": "int2-seven-pillars", "label": "The Seven Pillars — Qimah", "reward": "Choice: +5 to all Attributes, +5 to all Elemental Resistances, 12% increased Cooldown Recovery, 3% increased Movement Speed, 20% increased Presence Area, 15% increased Global Defences, or 5% increased Experience (with drawbacks)", "type": "choice" }
+      ]
+    },
+    {
+      "id": "interlude3",
+      "name": "Interlude 3: Doryani's Contingency",
+      "steps": [
+        { "id": "int3-lythara", "label": "Lythara, The Wayward Spear — Kriar Village", "reward": "+40 Spirit", "type": "spirit" },
+        { "id": "int3-elder-madox", "label": "Elder Madox — Kriar Peaks", "reward": "One free Unique Item (choice)", "type": "choice" },
+        { "id": "int3-abominable-yeti", "label": "The Abominable Yeti — Howling Caves", "reward": "+2 Passive Skill Points", "type": "passive" },
+        { "id": "int3-hooded-one", "label": "The Hooded One — Siege Of Oriath (Kingsmarch)", "reward": "+2 Passive Skill Points", "type": "passive" }
+      ]
+    }
+  ],
+  "totals": {
+    "passiveSkillPoints": 24,
+    "spirit": 100,
+    "elementalResistanceAll": "+10%",
+    "maximumLife": "+20 and +5% increased",
+    "maximumMana": "+5%"
+  }
+}
