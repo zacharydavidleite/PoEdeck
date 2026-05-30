@@ -9,7 +9,7 @@ import { toaster } from "@decky/api";
 import { FC, useEffect, useState } from "react";
 
 import { updateSettings, useStore } from "../../state";
-import { copyToClipboard } from "../../util";
+import { copyToClipboard, openGuideInBrowser } from "../../util";
 
 export const ToolsTab: FC = () => {
   const { settings } = useStore();
@@ -64,20 +64,30 @@ export const ToolsTab: FC = () => {
 
       <PanelSection title="Quick links">
         {settings.guideUrl ? (
-          <PanelSectionRow>
-            <ButtonItem
-              layout="below"
-              description={settings.guideUrl}
-              onClick={() => copyToClipboard(settings.guideUrl, "Guide URL")}
-            >
-              Copy guide URL
-            </ButtonItem>
-          </PanelSectionRow>
+          <>
+            <PanelSectionRow>
+              <ButtonItem
+                layout="below"
+                description={settings.guideUrl}
+                onClick={() => openGuideInBrowser(settings.guideUrl)}
+              >
+                Open guide in browser
+              </ButtonItem>
+            </PanelSectionRow>
+            <PanelSectionRow>
+              <ButtonItem
+                layout="below"
+                onClick={() => copyToClipboard(settings.guideUrl, "Guide URL")}
+              >
+                Copy guide URL
+              </ButtonItem>
+            </PanelSectionRow>
+          </>
         ) : (
           <PanelSectionRow>
             <Field focusable={false}>
-              Save a Mobalytics guide URL in Settings to get a quick copy link
-              here.
+              Save a Mobalytics guide URL in Settings to open it in the browser
+              from here.
             </Field>
           </PanelSectionRow>
         )}

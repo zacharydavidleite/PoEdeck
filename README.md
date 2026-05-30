@@ -13,19 +13,28 @@ game.
 
 ## Features
 
+- **Open your guide in Steam's browser** — one button (and an optional
+  controller shortcut) opens your saved Mobalytics URL in Steam's built-in
+  browser overlay, so it works even while Path of Exile 2 is running. This uses
+  Steam's real, controller-navigable browser (`NavigateToExternalWeb`), not an
+  embedded iframe.
+- **Controller shortcut** — bind a button or back-paddle combo (default
+  **L4 + R4**) to pop the guide open in the browser from anywhere, including
+  in-game.
 - **Hybrid UI** — a compact panel lives in the Quick Access Menu (active build
-  summary, quick reminders, guide-URL copy, and an **Open Exile Guide** button)
-  that opens a full-screen, 5-tab page.
+  summary, quick reminders, open/copy guide URL) plus an **Open Exile Guide**
+  button for the full-screen, 5-tab page.
 - **My Build** — the active build profile with editable sections for skill gems,
-  passive priorities, gear priorities, boss notes, and custom notes, plus a copy
-  button for the guide URL.
+  passive priorities, gear priorities, boss notes, and custom notes, plus
+  open-in-browser and copy buttons for the guide URL.
 - **Campaign** — an act-by-act collapsible checklist of PoE 2's permanent
   campaign rewards (passive points, spirit, resistances, life/mana, choice
   nodes). Check off rewards as you collect them; progress is saved.
 - **Checklist** — your own list of items you can add, complete, and delete.
 - **Tools** — resistance and attribute reminders, free-text loot filter notes,
-  and a copy link for your saved guide URL.
-- **Settings** — guide URL, build name, class dropdown, ascendancy, and save.
+  and open/copy links for your saved guide URL.
+- **Settings** — guide URL, build name, class dropdown, ascendancy, the
+  controller shortcut, and save.
 - Controller-focusable controls, large readable text, and dark Deck-native
   styling throughout.
 
@@ -108,12 +117,16 @@ README.md
 1. Open **Exile Guide** in the Quick Access Menu, then press **Open Exile
    Guide** to bring up the full page.
 2. Go to **Settings**, paste your Mobalytics guide URL, name your build, pick a
-   class, type your ascendancy, and **Save build**.
-3. In **My Build**, fill in skill gems, passive/gear priorities, boss notes, and
+   class, type your ascendancy, and **Save build**. Optionally enable the
+   **controller shortcut** and pick a button/combo.
+3. Press **Open guide in browser** (in the QAM panel, My Build, or Tools) — or
+   your controller shortcut — to open the guide in Steam's browser overlay,
+   even while in-game.
+4. In **My Build**, fill in skill gems, passive/gear priorities, boss notes, and
    custom notes from your guide; **Save notes**.
-4. While leveling, open the **Campaign** tab and check off each permanent reward
+5. While leveling, open the **Campaign** tab and check off each permanent reward
    as you collect it.
-5. Use **Checklist** for personal reminders and **Tools** for resistance and
+6. Use **Checklist** for personal reminders and **Tools** for resistance and
    attribute checks. The QAM panel keeps your build summary and reminders one
    button-press away.
 

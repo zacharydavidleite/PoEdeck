@@ -10,7 +10,7 @@ import { FaBook } from "react-icons/fa";
 
 import { EXILE_GUIDE_ROUTE } from "../routes";
 import { getActiveProfile, loadAll, useStore } from "../state";
-import { copyToClipboard } from "../util";
+import { copyToClipboard, openGuideInBrowser } from "../util";
 
 export const QamPanel: FC = () => {
   const { loaded, campaign, settings } = useStore();
@@ -60,14 +60,25 @@ export const QamPanel: FC = () => {
         )}
 
         {settings.guideUrl && (
-          <PanelSectionRow>
-            <ButtonItem
-              layout="below"
-              onClick={() => copyToClipboard(settings.guideUrl, "Guide URL")}
-            >
-              Copy guide URL
-            </ButtonItem>
-          </PanelSectionRow>
+          <>
+            <PanelSectionRow>
+              <ButtonItem
+                layout="below"
+                icon={<FaBook />}
+                onClick={() => openGuideInBrowser(settings.guideUrl)}
+              >
+                Open guide in browser
+              </ButtonItem>
+            </PanelSectionRow>
+            <PanelSectionRow>
+              <ButtonItem
+                layout="below"
+                onClick={() => copyToClipboard(settings.guideUrl, "Guide URL")}
+              >
+                Copy guide URL
+              </ButtonItem>
+            </PanelSectionRow>
+          </>
         )}
       </PanelSection>
 

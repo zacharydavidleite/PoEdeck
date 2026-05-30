@@ -111,8 +111,8 @@ export const SettingsTab: FC = () => {
     <PanelSection title="Controller shortcut">
       <PanelSectionRow>
         <ToggleField
-          label="Open Exile Guide with a button"
-          description="Works in-game. Uses back paddles by default to avoid conflicts."
+          label="Open guide in browser with a button"
+          description="Opens your guide URL in Steam's browser, even in-game. Uses back paddles by default to avoid conflicts."
           checked={settings.shortcutEnabled}
           onChange={(checked) => updateSettings({ shortcutEnabled: checked })}
         />

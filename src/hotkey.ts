@@ -1,8 +1,6 @@
-import { Navigation } from "@decky/ui";
-
-import { EXILE_GUIDE_ROUTE } from "./routes";
 import { getSettingsSnapshot } from "./state";
 import { SHORTCUT_OPTIONS } from "./types";
+import { openGuideInBrowser } from "./util";
 
 // Global controller-button shortcut.
 //
@@ -27,12 +25,7 @@ function activeCombo(): number[] {
 }
 
 function openGuide() {
-  try {
-    Navigation.Navigate(EXILE_GUIDE_ROUTE);
-    Navigation.CloseSideMenus?.();
-  } catch (err) {
-    console.error("[Exile Guide] failed to open via shortcut", err);
-  }
+  openGuideInBrowser(getSettingsSnapshot().guideUrl);
 }
 
 export function setupHotkey(): void {

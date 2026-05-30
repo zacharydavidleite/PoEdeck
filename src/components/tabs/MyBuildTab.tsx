@@ -10,7 +10,7 @@ import { FC, useEffect, useState } from "react";
 
 import { getActiveProfile, persistProfile, useStore } from "../../state";
 import { BuildProfile } from "../../types";
-import { copyToClipboard } from "../../util";
+import { copyToClipboard, openGuideInBrowser } from "../../util";
 
 const SECTIONS: { key: keyof BuildProfile; label: string }[] = [
   { key: "skillGems", label: "Skill gems" },
@@ -64,15 +64,25 @@ export const MyBuildTab: FC = () => {
       </PanelSectionRow>
 
       {draft.guideUrl ? (
-        <PanelSectionRow>
-          <ButtonItem
-            layout="below"
-            description={draft.guideUrl}
-            onClick={() => copyToClipboard(draft.guideUrl, "Guide URL")}
-          >
-            Copy guide URL
-          </ButtonItem>
-        </PanelSectionRow>
+        <>
+          <PanelSectionRow>
+            <ButtonItem
+              layout="below"
+              description={draft.guideUrl}
+              onClick={() => openGuideInBrowser(draft.guideUrl)}
+            >
+              Open guide in browser
+            </ButtonItem>
+          </PanelSectionRow>
+          <PanelSectionRow>
+            <ButtonItem
+              layout="below"
+              onClick={() => copyToClipboard(draft.guideUrl, "Guide URL")}
+            >
+              Copy guide URL
+            </ButtonItem>
+          </PanelSectionRow>
+        </>
       ) : null}
 
       {SECTIONS.map((section) => (
