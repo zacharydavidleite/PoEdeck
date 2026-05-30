@@ -4,6 +4,7 @@ import {
   PanelSection,
   PanelSectionRow,
   TextField,
+  ToggleField,
 } from "@decky/ui";
 import { toaster } from "@decky/api";
 import { FC, useEffect, useState } from "react";
@@ -15,7 +16,12 @@ import {
   updateSettings,
   useStore,
 } from "../../state";
-import { BuildProfile, POE2_CLASSES, emptyProfile } from "../../types";
+import {
+  BuildProfile,
+  POE2_CLASSES,
+  SHORTCUT_OPTIONS,
+  emptyProfile,
+} from "../../types";
 
 export const SettingsTab: FC = () => {
   const { profiles, settings } = useStore();
@@ -41,6 +47,7 @@ export const SettingsTab: FC = () => {
   const onNew = () => setDraft({ ...emptyProfile(), guideUrl: settings.guideUrl });
 
   return (
+    <>
     <PanelSection title="Settings">
       {profiles.length > 0 && (
         <PanelSectionRow>
@@ -100,5 +107,30 @@ export const SettingsTab: FC = () => {
         </ButtonItem>
       </PanelSectionRow>
     </PanelSection>
+
+    <PanelSection title="Controller shortcut">
+      <PanelSectionRow>
+        <ToggleField
+          label="Open Exile Guide with a button"
+          description="Works in-game. Uses back paddles by default to avoid conflicts."
+          checked={settings.shortcutEnabled}
+          onChange={(checked) => updateSettings({ shortcutEnabled: checked })}
+        />
+      </PanelSectionRow>
+      {settings.shortcutEnabled && (
+        <PanelSectionRow>
+          <DropdownItem
+            label="Button"
+            rgOptions={SHORTCUT_OPTIONS.map((o) => ({
+              label: o.label,
+              data: o.key,
+            }))}
+            selectedOption={settings.shortcutCombo}
+            onChange={(opt) => updateSettings({ shortcutCombo: opt.data as string })}
+          />
+        </PanelSectionRow>
+      )}
+    </PanelSection>
+    </>
   );
 };

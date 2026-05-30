@@ -4,7 +4,30 @@ export interface Settings {
   guideUrl: string;
   activeProfileId: string;
   lootFilterNotes: string;
+  shortcutEnabled: boolean;
+  shortcutCombo: string;
 }
+
+// Controller shortcut presets. Button codes come from
+// ControllerInputGamepadButton in decky-frontend-lib's Input.ts.
+// A=0, L4=32, R4=33, L5=44, R5=45.
+export interface ShortcutOption {
+  key: string;
+  label: string;
+  buttons: number[];
+}
+
+export const SHORTCUT_OPTIONS: ShortcutOption[] = [
+  { key: "l4_r4", label: "L4 + R4 (back paddles)", buttons: [32, 33] },
+  { key: "l5_r5", label: "L5 + R5 (upper back)", buttons: [44, 45] },
+  { key: "l4_r5", label: "L4 + R5", buttons: [32, 45] },
+  { key: "l4", label: "L4 only", buttons: [32] },
+  { key: "r4", label: "R4 only", buttons: [33] },
+  { key: "l5", label: "L5 only", buttons: [44] },
+  { key: "r5", label: "R5 only", buttons: [45] },
+];
+
+export const DEFAULT_SHORTCUT_COMBO = "l4_r4";
 
 export interface BuildProfile {
   id: string;

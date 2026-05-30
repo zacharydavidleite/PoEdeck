@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from "react";
 
 import * as api from "./api";
+import { DEFAULT_SHORTCUT_COMBO } from "./types";
 import type {
   BuildProfile,
   CampaignGuide,
@@ -25,6 +26,8 @@ const DEFAULT_SETTINGS: Settings = {
   guideUrl: "",
   activeProfileId: "",
   lootFilterNotes: "",
+  shortcutEnabled: false,
+  shortcutCombo: DEFAULT_SHORTCUT_COMBO,
 };
 
 let state: StoreState = {
@@ -80,6 +83,10 @@ export async function loadAll(force = false): Promise<void> {
 }
 
 // ---- Derived --------------------------------------------------------------
+
+export function getSettingsSnapshot(): Settings {
+  return state.settings;
+}
 
 export function getActiveProfile(): BuildProfile | null {
   const { profiles, settings } = state;

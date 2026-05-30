@@ -44,10 +44,16 @@ class Plugin:
     # ---- Settings -------------------------------------------------------
 
     async def get_settings(self) -> dict:
-        return self._read_json(
-            self._file("settings.json"),
-            {"guideUrl": "", "activeProfileId": "", "lootFilterNotes": ""},
-        )
+        defaults = {
+            "guideUrl": "",
+            "activeProfileId": "",
+            "lootFilterNotes": "",
+            "shortcutEnabled": False,
+            "shortcutCombo": "l4_r4",
+        }
+        stored = self._read_json(self._file("settings.json"), {})
+        defaults.update(stored)
+        return defaults
 
     async def set_settings(self, settings: dict) -> dict:
         current = await self.get_settings()
